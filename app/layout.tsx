@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <div className="xl:w-1/2 mx-auto px-4 mt-4">
+        <div className="xl:w-[40%] mx-auto px-4 mt-12">
           {children}
         </div>
       </body>
