@@ -11,38 +11,41 @@ export default async function Home() {
 
   return (
     <main>
-      <div>
-        <h1 className="text-xl my-10">Varsinais-Suomen Kaverikoirat</h1>
-        <ul>
-          {blogPosts.map((blogPost) => {
-            return (
-              <li key={blogPost.title}>
-                {/* Render the blog post image */}
-                {blogPost.image && (
-                  <img
-                    src={blogPost.image.src}
-                    // Use the Contentful Images API to render
-                    // responsive images. No next/image required:
-                    srcSet={`${blogPost.image.src}?w=300 1x, ${blogPost.image.src} 2x`}
-                    width={300}
-                    height={300}
-                    alt={blogPost.image.alt}
-                  />
-                )}
+      <div className="relative mb-8 h-full w-full bg-white">
+        <div className='container mx-auto lg:flex'>
+          <div className='mt-6 w-full lg:w-[65%] lg:px-8'>
+            <ul>
+              {blogPosts.map((blogPost) => {
+                return (
+                  <li key={blogPost.title}>
+                    {/* Render the blog post image */}
+                    {blogPost.image && (
+                      <img
+                        src={blogPost.image.src}
+                        // Use the Contentful Images API to render
+                        // responsive images. No next/image required:
+                        srcSet={`${blogPost.image.src}?w=300 1x, ${blogPost.image.src} 2x`}
+                        width={300}
+                        height={300}
+                        alt={blogPost.image.alt}
+                      />
+                    )}
 
-                {/* Render the blog post title */}
-                <h1 className='my-6'>{blogPost.title}</h1>
+                    {/* Render the blog post title */}
+                    <h1 className='my-6 text-4xl font-semibold leading-[1.3]'>{blogPost.title}</h1>
 
-                {/* Render the blog post body */}
-                <RichText document={blogPost.body} />
-              </li>
-            )
-          })}
-        </ul>
-        {/* <Image
+                    {/* Render the blog post body */}
+                    <RichText document={blogPost.body} />
+                  </li>
+                )
+              })}
+            </ul>
+            {/* <Image
           src={dogs}
           alt="Kaverikoirat"
         /> */}
+          </div>
+        </div>
       </div>
     </main>
   );
