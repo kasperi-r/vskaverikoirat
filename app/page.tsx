@@ -11,13 +11,13 @@ export default async function Home() {
 
   return (
     <main>
-      <div className="relative mb-8 h-full w-full bg-white">
-        <div className='container mx-auto lg:flex'>
-          <div className='mt-6 w-full lg:w-[65%] lg:px-8'>
+      <div className="">
+        <div className=''>
+          <div className=''>
             <ul>
               {blogPosts.map((blogPost) => {
                 return (
-                  <li key={blogPost.title}>
+                  <li className="mb-12" key={blogPost.title}>
                     {/* Render the blog post image */}
                     {blogPost.image && (
                       <img
@@ -35,7 +35,9 @@ export default async function Home() {
                     <h1 className='my-6 text-4xl font-semibold leading-[1.3]'>{blogPost.title}</h1>
 
                     {/* Render the blog post body */}
-                    <RichText document={blogPost.body} />
+                    <div className='block text-base font-light leading-relaxed'>
+                      <RichText document={blogPost.body} />
+                    </div>
                   </li>
                 )
               })}
