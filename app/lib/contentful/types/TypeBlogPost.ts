@@ -2,6 +2,8 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 
 export interface TypeBlogPostFields {
   title?: EntryFieldTypes.Symbol
+  createdAt: EntryFieldTypes.Date
+  customDate?: EntryFieldTypes.Date
   slug: EntryFieldTypes.Symbol
   body?: EntryFieldTypes.RichText
   image?: EntryFieldTypes.AssetLink
