@@ -10,6 +10,8 @@ type BlogPostEntry = Entry<TypeBlogPostSkeleton, undefined, string>
 // We don't need all the data that Contentful gives us.
 export interface BlogPost {
   title: string
+  createdAt: Date
+  customDate?: Date
   slug: string
   body: RichTextDocument | null
   image: ContentImage | null
@@ -24,6 +26,7 @@ export function parseContentfulBlogPost(blogPostEntry?: BlogPostEntry): BlogPost
 
   return {
     title: blogPostEntry.fields.title || '',
+    createdAt: new Date(blogPostEntry.fields.customDate ?? blogPostEntry.sys.createdAt),
     slug: blogPostEntry.fields.slug,
     body: blogPostEntry.fields.body || null,
     image: parseContentfulContentImage(blogPostEntry.fields.image),
