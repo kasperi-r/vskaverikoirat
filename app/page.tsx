@@ -2,8 +2,6 @@ import { draftMode } from 'next/headers';
 import { fetchBlogPosts } from './lib/contentful/blogPosts';
 import RichText from './lib/contentful/RichText';
 import { BlogPost } from './lib/contentful/blogPosts';
-import Image from "next/image";
-import dogs from "../public/dogs.jpg";
 
 function formatDate(date: Date) {
   const day = date.getDate();
@@ -24,7 +22,7 @@ export default async function Home() {
           {blogPosts.map((blogPost: BlogPost) => {
             console.log(blogPost)
             return (
-              <li className="mb-12 pb-12 border-b-2" key={blogPost.title}>
+              <li className="mb-12 pb-12 p-4 border rounded-lg bg-white shadow" key={blogPost.title}>
                 {/* Render the blog post image */}
                 {blogPost.image && (
                   // Use the Contentful Images API to render
@@ -36,7 +34,7 @@ export default async function Home() {
                 )}
 
                 {/* Render the blog post title */}
-                <h1 className='my-6 text-4xl font-sans font-semibold leading-[1.3]'>{blogPost.title}</h1>
+                <h1 className='mb-6 text-4xl font-sans font-semibold leading-[1.3]'>{blogPost.title}</h1>
 
                 <p className='mb-6 font-sans font-light'>{formatDate(blogPost.createdAt)}</p>
 
