@@ -5,18 +5,27 @@ export default function Header() {
 
   const links = [
     { href: '/', label: 'Etusivu' },
-    { href: '/taikatassut', label: 'Turun Taikatassut' },
-    { href: '/halinallet', label: 'Pohjoisen Turun Halinallet' },
-    { href: '/karvatassut', label: 'Salon Karvatassut' },
+    { href: '/taikatassut', label: 'Taikatassut' },
+    { href: '/halinallet', label: 'Halinallet' },
+    { href: '/karvatassut', label: 'Karvatassut' },
+    { href: '/info', label: 'Info' },
+    { href: '/liity-mukaan', label: 'Liity mukaan' }
   ];
 
   return (
-    <header className="relative w-full p-4 px-5 sm:px-10 flex items-center justify-between bg-gray-800">
+    <header className="relative w-full p-4 px-5 sm:px-10 flex items-center justify-between text-white bg-gray-800">
       <h4 className={`${palanquin.className} text-xl text-white`}>Varsinais-Suomen Kaverikoirat</h4>
-      <nav className="absolute left-1/2 transform -translate-x-1/2 flex justify-center text-white">
-        {links.map(({ href, label }) => (
-          <Link key={label} className="md:hover:text-orange-300 mx-4" href={href}>{label}</Link>
-        ))}
+      <nav className="">
+        <div className="absolute left-1/2 transform -translate-x-1/2 space-x-6">
+          {links.slice(0, 4).map(({ href, label }) => (
+            <Link key={label} className="md:hover:text-orange-300" href={href}>{label}</Link>
+          ))}
+        </div>
+        <div className="flex justify-center space-x-4">
+          {links.slice(4).map(({ href, label }) => (
+            <Link key={label} className="md:hover:text-orange-300" href={href}>{label}</Link>
+          ))}
+        </div>
       </nav>
     </header>
   );
