@@ -21,8 +21,8 @@ export default async function Home() {
   return (
     <div className="">
       <main className="">
-        <Image src={mainImg} alt='Hero image' />
-        <div className="mb-12 pb-12 p-4 border rounded-b-lg bg-white shadow">
+        <Image src={mainImg} alt='Hero image' className='opacity-80 rounded-t-lg' />
+        <div className="mb-12 pb-12 p-4 rounded-b-lg bg-white shadow">
           <h1 className={`${inter.className} mb-6 text-4xl font-semibold leading-[1.3]`}>Varsinais-Suomen Kennelpiirin kaverikoiratoiminta</h1>
           <p className='block text-base font-light leading-relaxed'>Kaverikoiratoiminta on vapaaehtoistoimintaa, jossa koira tuo iloa, elämyksiä ja läheisyyttä ihmisille, joilla ei ole omaa koiraa. Toiminta on alkanut Varsinais-Suomessa 2001 ja tällä hetkellä toimintaa on koko Suomessa ja mukana on noin 1500 kaverikoirakkoa.
             Näiltä sivuilta löydät Varsinais-Suomen kaverikoiraryhmien omat sivut.
@@ -32,12 +32,13 @@ export default async function Home() {
           {blogPosts.map((blogPost: BlogPost) => {
             console.log(blogPost)
             return (
-              <li className="mb-12 pb-12 p-4 border rounded-lg bg-white shadow" key={blogPost.title}>
+              <li className="mb-12 pb-12 p-4 rounded-lg bg-white shadow" key={blogPost.title}>
                 {/* Render the blog post image */}
                 {blogPost.image && (
                   // Use the Contentful Images API to render
                   // responsive images. No next/image required:
                   <img
+                    className='rounded-lg'
                     src={blogPost.image.src}
                     alt={blogPost.image.alt}
                   />
