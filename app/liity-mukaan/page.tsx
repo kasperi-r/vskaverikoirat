@@ -1,13 +1,35 @@
 import InfoComponent from "../ui/InfoComponent";
 
 export default function LiityMukaan() {
+  // return (
+  //   <InfoComponent
+  //     title="Näin pääset mukaan toimintaan:"
+  //     body={[
+  //       "Pääset mukaan toimintaan kurssin käytyäsi. Varsinais-Suomessa seuraava kaverikoirakurssi järjestetään elokuussa 17.-18.8.2024 kurssille voi ilmoittautua osoitteeseen vskaverikoirat@gmail.com",
+  //       "Ennen koulutukseen hakemista tutustu kaverikoiratoiminnan ohjeisiin ja mieti pystytkö sitoutumaan vapaaehtoistoimintaan. Toiminta ei ole tarkoitettu koiran kouluttamiseen tai sosiaalistamiseen tai meriittien keräämiseen koiralle, vaan vapaaehtoistoiminnan toteuttamiseen.",
+  //     ]}
+  //   />
+  // );
+
   return (
-    <InfoComponent
-      title="Näin pääset mukaan toimintaan:"
-      body={[
-        "Pääset mukaan toimintaan kurssin käytyäsi. Varsinais-Suomessa seuraava kaverikoirakurssi järjestetään elokuussa 17.-18.8.2024 kurssille voi ilmoittautua osoitteeseen vskaverikoirat@gmail.com",
-        "Ennen koulutukseen hakemista tutustu kaverikoiratoiminnan ohjeisiin ja mieti pystytkö sitoutumaan vapaaehtoistoimintaan. Toiminta ei ole tarkoitettu koiran kouluttamiseen tai sosiaalistamiseen tai meriittien keräämiseen koiralle, vaan vapaaehtoistoiminnan toteuttamiseen.",
-      ]}
-    />
+    <div className="p-4 font-light leading-relaxed">
+      <h1 className="text-3xl mb-8">Näin pääset mukaan toimintaan:</h1>
+      <p>Pääset mukaan toimintaan kurssin käytyäsi. Varsinais-Suomessa seuraava kaverikoirakurssi järjestetään elokuussa 17.-18.8.2024.</p>
+      <p>Kurssille voi ilmoittautua osoitteeseen vskaverikoirat@gmail.com</p>
+      <p>Ennen koulutukseen hakemista tutustu kaverikoiratoiminnan ohjeisiin ja mieti pystytkö sitoutumaan vapaaehtoistoimintaan. Toiminta ei ole tarkoitettu koiran kouluttamiseen tai sosiaalistamiseen tai meriittien keräämiseen koiralle, vaan vapaaehtoistoiminnan toteuttamiseen.</p>
+      <p>Kaverikoiran ja ohjaajan edellytykset:</p>
+      <ul className="pl-5 list-disc mb-4">
+        <li>Ohjaaja täysi-ikäinen, koira kurssin aikaan vähintään 2- vuotias</li>
+        <li>Ohjaaja kennelliiton jäsen ja koira kennelliiton rekisterissä (roturekisteri tai FIX—rekisteri)</li>
+        <li>Ohjaaja on koiran omistaja ja asuu koiran kanssa samassa taloudessa</li>
+        <li>Koira on perusterve ilman pysyvää lääkitystä mihinkään sairauteen</li>
+        <li>Koiran rokotukset oltava voimassa (koko kaverikoiratoiminnan ajan)</li>
+        <li>Koira on ystävällinen ihmisille ja tulee toimeen muiden koirien kanssa kohtaamistilanteissa</li>
+        <li>Kodinvaihtaja - koiran on ollut oltava yli 1 vuosi nykyisellä omistajalla ja koiran historia pitää olla syntymästä asti tiedossa, siksi valitettavasti ns. rescue-koirat eivät voi tulla kennelliiton kaverikoiratoimintaan</li>
+      </ul>
+      <p>Tietoja kurssien ajankohdista ja ilmoittautumisosoitteen saat Kennelliiton sivuilta:
+        https://www.kennelliitto.fi/koirat/kaverikoirat/kaverikoirakurssit-ja-tapahtumat
+      </p>
+    </div>
   );
 } 
