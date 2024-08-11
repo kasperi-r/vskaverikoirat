@@ -28,7 +28,7 @@ export default async function Home() {
             Näiltä sivuilta löydät Varsinais-Suomen kaverikoiraryhmien omat sivut.
           </p>
         </div>
-        <Image src='/main_img.jpg' alt='Main image' width={1200} height={1200} className='rounded-md' />
+        <Image src='/main_img.jpg' alt='Main image' width={1024} height={684} className='rounded-md' />
         <ul>
           {blogPosts.map((blogPost: BlogPost) => {
             console.log(blogPost)
