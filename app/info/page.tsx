@@ -18,7 +18,7 @@ export default function Info() {
       <p>Näin toimien kaverikoiratoiminta on kaikille osapuolille turvallista ja mukavaa ja meillä on voimassa Kennelliiton vakuutukset.</p>
       <h1 className="text-3xl mb-8 mt-8">Kaverikoiratoiminta on vapaaehtoistyötä</h1>
       <p>Toimimme täysin ilman korvausta omien koiriemme kanssa ilahduttaen ihmisiä. Emme ota vastaan palkkioita emmekä mainosta toiminnassamme mitään. Ainoat mahdolliset yhteistyökumppanimme ovat Kennelliiton viralliset yhteistyötahot ja heiltäkään emme saa korvauksia vapaaehtoistyöstämme.</p>
-      <p>Kaverikoiran -nimikettä ei myöskään käytetä mainostamassa omaa koiraa (esim. jalostuksessa ) tai omaa kenneliä.</p>
+      <p>Kaverikoira -nimikettä ei myöskään käytetä mainostamassa omaa koiraa (esim. jalostuksessa ) tai omaa kenneliä.</p>
       <h1 className="text-3xl mb-8 mt-8">Näin voit kysyä kaverikoiria vierailuille:</h1>
       <p>Jokainen kaverikoiraryhmä vastaa omien vierailukohteidensa toteuttamisesta. Toisinaan olemme myös yleisötapahtumissa yms. yhteisvierailuilla kaikin ryhmiemme kanssa.</p>
       <p>Ota yhteyttä kaverikoiraryhmiin ja kysy vierailumahdollisuutta:</p>
