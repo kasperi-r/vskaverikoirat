@@ -20,7 +20,7 @@ export default async function Home() {
     <div className="">
       <main className="">
         <div className="p-4">
-          <h1 className="text-5xl font-bold text-gray-700 mb-8 text-center leading-snug">
+          <h1 className="text-gray-700 mb-8 text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold break-words leading-snug">
             Varsinais-Suomen Kennelpiirin kaverikoiratoiminta
           </h1>
           <p className="text-lg text-gray-700 mb-8">
