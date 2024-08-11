@@ -17,7 +17,8 @@ export default function LiityMukaan() {
         <li>Kodinvaihtaja - koiran on ollut oltava yli 1 vuosi nykyisellä omistajalla ja koiran historia pitää olla syntymästä asti tiedossa, siksi valitettavasti ns. rescue-koirat eivät voi tulla kennelliiton kaverikoiratoimintaan</li>
       </ul>
       <p>Tietoja kurssien ajankohdista ja ilmoittautumisosoitteen saat Kennelliiton sivuilta:
-        https://www.kennelliitto.fi/koirat/kaverikoirat/kaverikoirakurssit-ja-tapahtumat
+        <br />
+        <a href="https://www.kennelliitto.fi/koirat/kaverikoirat/kaverikoirakurssit-ja-tapahtumat" className="underline break-words">kennelliitto.fi/koirat/kaverikoirat/kaverikoirakurssit-ja-tapahtumat</a>
       </p>
     </div>
   );
