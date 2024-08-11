@@ -16,6 +16,7 @@ export default function Taikatassut() {
         <Image src="/taikatassut1.jpg" alt="Taikatassut_kuva1" width={1080} height={712} className="w-full mb-4" />
         <Image src="/taikatassut2.jpg" alt="Taikatassut_kuva2" width={615} height={1054} className="w-full mb-4" />
         <Image src="/taikatassut3.jpg" alt="Taikatassut_kuva3" width={1080} height={1080} className="w-full mb-4" />
+        <Image src="/taikatassut4.jpg" alt="Taikatassut_kuva4" width={1536} height={2048} className="w-full mb-4" />
       </div>
     </>
   );
