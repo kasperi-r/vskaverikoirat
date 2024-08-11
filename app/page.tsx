@@ -28,7 +28,8 @@ export default async function Home() {
             Näiltä sivuilta löydät Varsinais-Suomen kaverikoiraryhmien omat sivut.
           </p>
         </div>
-        <Image src='/4_koiraa.jpg' alt='Neljä koiraa' width={2448} height={1636} className='rounded-md shadow-xl' />
+        <Image src='/4_koiraa.jpg' alt='Neljä koiraa' width={2448} height={1636} className='rounded-md shadow-xl mb-8' />
+        <Image src='/4_koiraa_2.jpg' alt='Neljä koiraa' width={1080} height={715} className='rounded-md shadow-xl' />
         <ul>
           {blogPosts.map((blogPost: BlogPost) => {
             console.log(blogPost)
