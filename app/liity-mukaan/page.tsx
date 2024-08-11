@@ -3,7 +3,7 @@ export default function LiityMukaan() {
   return (
     <div className="p-4 leading-relaxed">
       <h1 className="text-3xl mb-8">Näin pääset mukaan toimintaan:</h1>
-      <p>Pääset mukaan toimintaan kurssin käytyäsi. Varsinais-Suomessa seuraava kaverikoirakurssi järjestetään elokuussa 17.-18.8.2024.</p>
+      <p>Pääset mukaan toimintaan kurssin käytyäsi. Kaverikoirakurssi voidaan järjestää enintään kerran vuodessa samassa paikassa.</p>
       <p>Kurssille voi ilmoittautua osoitteeseen vskaverikoirat@gmail.com</p>
       <p>Ennen koulutukseen hakemista tutustu kaverikoiratoiminnan ohjeisiin ja mieti pystytkö sitoutumaan vapaaehtoistoimintaan. Toiminta ei ole tarkoitettu koiran kouluttamiseen tai sosiaalistamiseen tai meriittien keräämiseen koiralle, vaan vapaaehtoistoiminnan toteuttamiseen.</p>
       <p>Kaverikoiran ja ohjaajan edellytykset:</p>
