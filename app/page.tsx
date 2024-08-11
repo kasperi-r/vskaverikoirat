@@ -3,7 +3,6 @@ import { fetchBlogPosts } from './lib/contentful/blogPosts';
 import RichText from './lib/contentful/RichText';
 import { BlogPost } from './lib/contentful/blogPosts';
 import Image from 'next/image';
-import mainImg from '../public/main_img.jpg';
 
 function formatDate(date: Date) {
   const day = date.getDate();
@@ -21,15 +20,15 @@ export default async function Home() {
     <div className="">
       <main className="">
         <div className="pb-12 p-4">
-          <h1 className="text-5xl font-bold text-gray-800 mb-8 text-center leading-snug">
+          <h1 className="text-5xl font-bold text-gray-700 mb-8 text-center leading-snug">
             Varsinais-Suomen Kennelpiirin kaverikoiratoiminta
           </h1>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-700 mb-8">
             Kaverikoiratoiminta on vapaaehtoistoimintaa, jossa koira tuo iloa, elämyksiä ja läheisyyttä ihmisille, joilla ei ole omaa koiraa. Toiminta on alkanut Varsinais-Suomessa 2001 ja tällä hetkellä toimintaa on koko Suomessa ja mukana on noin 1500 kaverikoirakkoa.
             Näiltä sivuilta löydät Varsinais-Suomen kaverikoiraryhmien omat sivut.
           </p>
         </div>
-        <Image src={mainImg} alt='Main image' className='rounded-md' />
+        <Image src='/main_img.jpg' alt='Main image' width={1200} height={1200} className='rounded-md' />
         <ul>
           {blogPosts.map((blogPost: BlogPost) => {
             console.log(blogPost)

@@ -1,8 +1,6 @@
-import InfoComponent from "../ui/InfoComponent";
-
 export default function Info() {
   return (
-    <div className="p-4 font-light leading-relaxed">
+    <div className="p-4 leading-relaxed">
       <h1 className="text-3xl mb-8">Kaverikoiratoiminnan periaatteet</h1>
       <p>
         Kaverikoira-koirakot toimivat samojen käytänteiden ja ohjeiden mukaisesti. Kaverikoiraohjaajat vierailevat koiriensa kanssa esimerkiksi lasten, kehitysvammaisten ja vanhusten luona erilaisissa asumisyksiköissä, kouluissa, päiväkodeissa ja tapahtumissa.

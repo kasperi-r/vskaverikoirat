@@ -11,14 +11,3 @@
 p {
   @apply mb-4;
 }
-
-/* Add background image */
-body {
-  background-image: url('../public/pexels-lum3n-44775-406014.jpg');
-  background-size: cover;
-  /* Ensures the image covers the entire background */
-  background-position: center;
-  /* Centers the image */
-  background-repeat: no-repeat;
-  /* Prevents the image from repeating */
-}
