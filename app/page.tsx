@@ -28,7 +28,7 @@ export default async function Home() {
             Näiltä sivuilta löydät Varsinais-Suomen kaverikoiraryhmien omat sivut.
           </p>
         </div>
-        <Image src='/4_koiraa.jpg' alt='Neljä koiraa' width={2448} height={1636} className='rounded-md' />
+        <Image src='/4_koiraa.jpg' alt='Neljä koiraa' width={2448} height={1636} className='rounded-md shadow-xl' />
         <ul>
           {blogPosts.map((blogPost: BlogPost) => {
             console.log(blogPost)
@@ -39,19 +39,19 @@ export default async function Home() {
                   // Use the Contentful Images API to render
                   // responsive images. No next/image required:
                   <img
-                    className='rounded-lg'
+                    className='mb-4 rounded-lg'
                     src={blogPost.image.src}
                     alt={blogPost.image.alt}
                   />
                 )}
 
                 {/* Render the blog post title */}
-                <h1 className='mb-6 text-4xl font-sans font-semibold leading-[1.3]'>{blogPost.title}</h1>
+                <h1 className='mb-6 text-2xl sm:text-3xl font-semibold leading-[1.3]'>{blogPost.title}</h1>
 
-                <p className='mb-6 font-sans font-light'>{formatDate(blogPost.createdAt)}</p>
+                <p className='mb-6 font-light'>{formatDate(blogPost.createdAt)}</p>
 
                 {/* Render the blog post body */}
-                <div className='block text-base font-light leading-relaxed'>
+                <div className='block text-base leading-relaxed'>
                   <RichText document={blogPost.body} />
                 </div>
               </li>
