@@ -42,7 +42,7 @@ export default function Header() {
         <FaBars />
       </button>
       <div ref={modalRef}
-        className={`fixed top-16 right-0 bg-gray-800 bg-opacity-95 z-50 flex flex-col items-center justify-center p-4 rounded-lg transition-transform duration-200 ${showModal ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed top-20 right-0 bg-gray-800 bg-opacity-95 z-50 flex flex-col items-center justify-center p-4 transition-transform duration-200 ${showModal ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <button onClick={toggleModal} className="absolute top-2 right-2 p-2">
           <FaTimes />
