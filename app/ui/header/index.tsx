@@ -51,7 +51,7 @@ export default function Header() {
       </button>
       <div className={`fixed top-0 left-0 w-full h-[400px] z-50 flex flex-col items-center justify-end transition-transform duration-200 ${showModal ? 'translate-y-10' : '-translate-y-full'}`}
         style={{ backgroundImage: 'url(/paw.svg)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
-        <div className="flex flex-col items-center pb-8 mb-8">
+        <div className="flex flex-col items-center pb-10 mb-8">
         {links.slice(0, 3).map(({ path, label }) => (
           <Link key={label} href={path} onClick={toggleModal} className={`${path === pathname && "text-orange-300 border-b-2 border-orange-300"} hover:text-orange-300 text-xl mb-1`}>
             {label}
