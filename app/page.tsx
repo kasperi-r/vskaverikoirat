@@ -46,8 +46,21 @@ export default async function Home() {
                   />
                 )}
 
+                {blogPost.images && (
+                  <div className='columns-2 gap-4'>
+                    {blogPost.images.map((image) => (
+                      <img
+                        className='rounded-lg mb-4'
+                        key={image.src}
+                        src={image.src}
+                        alt={image.alt}
+                      />
+                    ))}
+                  </div>
+                )}
+
                 {/* Render the blog post title */}
-                <h1 className='mb-6 text-2xl sm:text-3xl font-semibold leading-[1.3]'>{blogPost.title}</h1>
+                <h1 className='my-6 text-2xl sm:text-3xl font-semibold leading-[1.3]'>{blogPost.title}</h1>
 
                 <p className='mb-6 font-light'>{formatDate(blogPost.createdAt)}</p>
 

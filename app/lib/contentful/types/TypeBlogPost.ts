@@ -7,6 +7,7 @@ export interface TypeBlogPostFields {
   slug: EntryFieldTypes.Symbol
   body?: EntryFieldTypes.RichText
   image?: EntryFieldTypes.AssetLink
+  images?: EntryFieldTypes.AssetLink[]
 }
 
 export type TypeBlogPostSkeleton = EntrySkeletonType<TypeBlogPostFields, 'blogPost'>

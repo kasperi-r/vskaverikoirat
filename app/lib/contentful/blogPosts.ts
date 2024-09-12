@@ -1,8 +1,8 @@
 import { TypeBlogPostSkeleton } from './types'
-import { Entry } from 'contentful'
+import { Entry, EntryFieldTypes } from 'contentful'
 import { Document as RichTextDocument } from '@contentful/rich-text-types'
 import contentfulClient from './contentfulClient'
-import { ContentImage, parseContentfulContentImage } from './contentImage'
+import { ContentImage, parseContentfulContentImage, parseContentfulContentImages } from './contentImage'
 
 type BlogPostEntry = Entry<TypeBlogPostSkeleton, undefined, string>
 
@@ -15,6 +15,7 @@ export interface BlogPost {
   slug: string
   body: RichTextDocument | null
   image: ContentImage | null
+  images: ContentImage[] | null
 }
 
 // A function to transform a Contentful blog post
@@ -30,6 +31,7 @@ export function parseContentfulBlogPost(blogPostEntry?: BlogPostEntry): BlogPost
     slug: blogPostEntry.fields.slug,
     body: blogPostEntry.fields.body || null,
     image: parseContentfulContentImage(blogPostEntry.fields.image),
+    images: parseContentfulContentImages(blogPostEntry.fields.images),
   }
 }
 
@@ -46,6 +48,8 @@ export async function fetchBlogPosts({ preview }: FetchBlogPostsOptions): Promis
     include: 2,
     order: ['fields.title'],
   })
+  // Log the full content of the blog posts result
+  console.log(JSON.stringify(blogPostsResult, null, 2));
 
   return blogPostsResult.items.map((blogPostEntry) => parseContentfulBlogPost(blogPostEntry) as BlogPost)
 }
