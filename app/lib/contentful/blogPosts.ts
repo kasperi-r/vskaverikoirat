@@ -49,7 +49,7 @@ export async function fetchBlogPosts({ preview }: FetchBlogPostsOptions): Promis
     order: ['fields.title'],
   })
   // Log the full content of the blog posts result
-  console.log(JSON.stringify(blogPostsResult, null, 2));
+  //console.log(JSON.stringify(blogPostsResult, null, 2));
 
   return blogPostsResult.items.map((blogPostEntry) => parseContentfulBlogPost(blogPostEntry) as BlogPost)
 }
@@ -68,7 +68,7 @@ export async function fetchBlogPost({ slug, preview }: FetchBlogPostOptions): Pr
     'fields.slug': slug,
     include: 2,
   })
-  console.log("blogPostsResult", JSON.stringify(blogPostsResult, null, 2));
+  //console.log("blogPostsResult", JSON.stringify(blogPostsResult, null, 2));
 
   return parseContentfulBlogPost(blogPostsResult.items[0])
 }
