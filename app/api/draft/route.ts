@@ -5,7 +5,7 @@ const { CONTENTFUL_PREVIEW_ACCESS_TOKEN } = process.env
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
-    if (searchParams.get('previewSecret') !== CONTENTFUL_PREVIEW_ACCESS_TOKEN) {
+    if (searchParams.get('secret') !== CONTENTFUL_PREVIEW_ACCESS_TOKEN) {
         return new Response('Invalid token', { status: 401 })
     }
 
