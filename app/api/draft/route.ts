@@ -1,6 +1,5 @@
 import { draftMode } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { fetchBlogPost } from '@/app/lib/contentful/blogPosts'
 const { CONTENTFUL_PREVIEW_ACCESS_TOKEN } = process.env
 
 export async function GET(request: Request) {

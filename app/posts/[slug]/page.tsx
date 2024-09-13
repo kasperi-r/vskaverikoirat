@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import { Metadata, ResolvingMetadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { fetchBlogPost, fetchBlogPosts } from '@/app/lib/contentful/blogPosts'
-import Link from 'next/link'
 import RichText from '@/app/lib/contentful/RichText'
+import { formatDate } from '@/lib/utils'
 
 interface BlogPostPageParams {
     slug: string
@@ -11,14 +12,6 @@ interface BlogPostPageParams {
 
 interface BlogPostPageProps {
     params: BlogPostPageParams
-}
-
-function formatDate(date: Date) {
-    const day = date.getDate();
-    const month = date.getMonth() + 1; // Months are zero indexed, so we add 1
-    const year = date.getFullYear();
-
-    return `${day}.${month}.${year}`;
 }
 
 // Tell Next.js about all our blog posts so
