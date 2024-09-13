@@ -9,6 +9,9 @@ export async function GET(request: Request) {
     const secret = searchParams.get('secret')
     const slug = searchParams.get('slug')
 
+    console.log('Secret:', secret);
+    console.log('Slug:', slug);
+
     // Check the secret and next parameters
     // This secret should only be known to this route handler and the CMS
     if (secret !== CONTENTFUL_PREVIEW_ACCESS_TOKEN || !slug) {

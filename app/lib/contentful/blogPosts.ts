@@ -68,6 +68,7 @@ export async function fetchBlogPost({ slug, preview }: FetchBlogPostOptions): Pr
     'fields.slug': slug,
     include: 2,
   })
+  console.log("blogPostsResult", JSON.stringify(blogPostsResult, null, 2));
 
   return parseContentfulBlogPost(blogPostsResult.items[0])
 }
