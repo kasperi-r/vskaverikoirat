@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { fetchBlogPosts } from './lib/contentful/blogPosts';
 import RichText from './lib/contentful/RichText';
 import { BlogPost } from './lib/contentful/blogPosts';
+import Gallery from './components/Gallery';
 import Image from 'next/image';
 import { formatDate } from '../lib/utils';
 
@@ -42,16 +43,7 @@ export default async function Home() {
                 )}
 
                 {blogPost.images && (
-                  <div className='columns-2 gap-4'>
-                    {blogPost.images.map((image) => (
-                      <img
-                        className='rounded-lg mb-4'
-                        key={image.src}
-                        src={image.src}
-                        alt={image.alt}
-                      />
-                    ))}
-                  </div>
+                  <Gallery images={blogPost.images} />
                 )}
 
                 {/* Render the blog post title */}
