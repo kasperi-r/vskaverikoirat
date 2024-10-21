@@ -11,7 +11,7 @@ export default function ImageZoom({ src, alt }: ImageZoomProps) {
 
     return (
         <Zoom>
-            <img className='rounded-lg' src={src} alt={alt} />
+            <img className='rounded-md' src={src} alt={alt} />
         </Zoom>
     );
 }
