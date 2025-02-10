@@ -19,19 +19,14 @@ This is a [Next.js](https://nextjs.org/) project for the "Varsinais-Suomen Kenne
   - `ui/`: UI components like header and footer.
   - Various pages for different sections of the website (e.g., `halinallet`, `info`, `karvatassut`, `liity-mukaan`, `taikatassut`).
 - `public/`: Public assets like images.
-- `styles/`: Global styles and Tailwind CSS configuration.
 - `lib/utils.ts`: Utility functions.
-- `next.config.mjs`: Next.js configuration.
-- `.eslintrc.json`: ESLint configuration.
-- `tailwind.config.ts`: Tailwind CSS configuration.
-- `tsconfig.json`: TypeScript configuration.
 
 ## Learn More
 
 To learn more about the tools and technologies used in this project, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Vercel Documentation](https://vercel.com/docs)
 - [Contentful Documentation](https://www.contentful.com/developers/docs/)
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
-- [Vercel Documentation](https://vercel.com/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
