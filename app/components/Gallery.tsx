@@ -6,7 +6,7 @@ interface GalleryProps {
 
 export default function Gallery({ images }: GalleryProps) {
     return (
-        <div className="grid grid-cols-2 gap-4">
+        <div className={images.length > 1 ? "grid grid-cols-2 gap-4" : ""}>
             {images.map((image, idx) => (
                 <ImageZoom key={idx} src={image.src} alt={image.alt} />
             ))}
