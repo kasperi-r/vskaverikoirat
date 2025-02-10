@@ -31,17 +31,9 @@ export default async function Home() {
             console.log(blogPost)
             return (
               <li className="my-12 pb-12 p-4 rounded-lg bg-white shadow" key={blogPost.title}>
-                {/* Render the blog post image */}
-                {blogPost.image && (
-                  // Use the Contentful Images API to render
-                  // responsive images. No next/image required:
-                  <img
-                    className='mb-4 rounded-lg'
-                    src={blogPost.image.src}
-                    alt={blogPost.image.alt}
-                  />
-                )}
-
+                {/* Render the blog post images
+                Use the Contentful Images API to render
+                responsive images. No next/image required: */}
                 {blogPost.images && (
                   <Gallery images={blogPost.images} />
                 )}
