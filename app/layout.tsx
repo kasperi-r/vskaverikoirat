@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Providers } from "./providers";
 import { inter } from "./ui/fonts";
 import Header from "./ui/header";
-import "./globals.css";
 import Footer from "./ui/Footer";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "VS Kaverikoirat",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light text-foreground bg-background">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased bg-default-100`}>
         <Providers>
           <div className="flex flex-col min-h-screen">
             <Header />
