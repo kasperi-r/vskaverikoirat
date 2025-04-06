@@ -15,7 +15,7 @@ import {
   Divider,
   Image,
 } from "@heroui/react";
-import { Icon } from "@iconify/react";
+import NextImage from "next/image";
 import { cn } from "@heroui/react";
 import { palanquin } from "../fonts";
 
@@ -49,12 +49,6 @@ export default function Component(props: NavbarProps) {
     >
       {/* Left Content */}
       <NavbarBrand>
-        <Icon
-          icon="lucide:paw"
-          className="text-2xl text-primary-500"
-          width="24"
-          height="24"
-        />
         <Link
           href="/"
           className={`${palanquin.className} ml-2 font-semibold text-inherit hover:opacity-80 transition-opacity`}
@@ -170,11 +164,11 @@ export default function Component(props: NavbarProps) {
         </div>
         <div className="flex items-center justify-center mt-8">
           <Image
+            as={NextImage}
             alt="Dog paw"
             src="/paw.svg"
             width={300}
             height={300}
-            className="opacity-50"
           />
         </div>
       </NavbarMenu>
