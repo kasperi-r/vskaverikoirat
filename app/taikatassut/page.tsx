@@ -1,6 +1,6 @@
-import Image from "next/image";
+import PhotoGallery from "../components/PhotoGallery";
 
-const images = [
+const photos = [
   {
     src: "/taikatassut1.jpg",
     alt: "Taikatassut_kuva1",
@@ -57,18 +57,7 @@ export default function Taikatassut() {
         <p>Ryhmänvetäjänä toimii Heli-Maarit Makkonen ja minut tavoittaa:</p>
         <p>kaverikoira.taikatassut@gmail.com tai 050 5763081</p>
       </div>
-      <div className="columns-1 md:columns-2 gap-4 mb-8">
-        {images.map((image) => (
-          <Image
-            key={image.src}
-            className="w-full mb-4 border rounded-lg dark:border-gray-800"
-            alt={image.alt}
-            src={image.src}
-            width={600}
-            height={600}
-          />
-        ))}
-      </div>
+      <PhotoGallery photos={photos} />
     </>
   );
 }
