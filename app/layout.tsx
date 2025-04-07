@@ -17,15 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light text-foreground bg-background">
-      <body className={`${inter.className} antialiased bg-default-100`}>
+      <body className={`${inter.className} antialiased`}>
         <Providers>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen bg-default-100">
             <Header />
-            <div className="flex-grow w-full max-w-screen-lg mx-auto px-6 pt-20 lg:pt-22">
+            <main className="w-full max-w-screen-lg mx-auto px-6 pt-20 lg:pt-22">
               {children}
-            </div>
-            <Footer />
+            </main>
           </div>
+          <Footer />
         </Providers>
       </body>
     </html>
