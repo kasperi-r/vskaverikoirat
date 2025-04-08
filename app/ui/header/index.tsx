@@ -37,13 +37,6 @@ export default function Component(props: NavbarProps) {
 
   return (
     <Navbar
-      classNames={{
-        base: "border-b border-default-200 bg-background/80 backdrop-blur-lg backdrop-saturate-150 shadow-md shadow-black/5",
-        wrapper: "px-4 max-w-7xl mx-auto",
-        menu:
-          "items-center mx-auto mt-2 max-h-[85vh] max-w-[90vw] rounded-3xl border border-default-200/30 bg-background/95 py-8 px-6 shadow-2xl backdrop-blur-2xl dark:bg-default-100/40",
-      }}
-      height="4rem"
       isBordered={false}
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
@@ -137,7 +130,7 @@ export default function Component(props: NavbarProps) {
               </Link>
             </NavbarMenuItem>
           ))}
-          <Divider className="my-2 opacity-50" />
+          <Divider className="my-2 opacity-75" />
           {rightLinks.map(({ path, label }) => (
             <NavbarMenuItem key={label} isActive={pathname === path} className="flex items-center">
               <Link
@@ -156,7 +149,7 @@ export default function Component(props: NavbarProps) {
             </NavbarMenuItem>
           ))}
         </div>
-        <div className="flex items-center justify-center mt-8">
+        <div className="flex items-center justify-center mt-4">
           <Image
             as={NextImage}
             alt="Dog paw"
