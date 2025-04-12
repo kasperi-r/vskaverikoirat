@@ -40,6 +40,10 @@ export default function Component(props: NavbarProps) {
       isBordered={false}
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
+      classNames={{
+        base: "bg-background/80 backdrop-blur-lg shadow-md",
+        wrapper: "max-w-screen-xl mx-auto",
+      }}
     >
       {/* Left Content */}
       <NavbarBrand>

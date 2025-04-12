@@ -21,7 +21,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex flex-col min-h-screen bg-default-100">
             <Header />
-            <main className="w-full max-w-screen-lg mx-auto px-6 pt-20 lg:pt-22">
+            <main className="w-full max-w-screen-xl mx-auto px-6 pt-20 lg:pt-22">
               {children}
             </main>
           </div>

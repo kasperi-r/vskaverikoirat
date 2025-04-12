@@ -3,7 +3,8 @@ import { draftMode } from "next/headers";
 import Link from "next/link";
 import { fetchBlogPosts } from "./lib/contentful/blogPosts";
 import RichText from "./lib/contentful/RichText";
-import { BlogPost } from "./lib/contentful/blogPosts";
+import { Hero } from "./components/Hero";
+import type { BlogPost } from "./lib/contentful/blogPosts";
 import Gallery from "./components/Gallery";
 import Image from "next/image";
 import { formatDate } from "../lib/utils";
@@ -14,8 +15,9 @@ export default async function Home() {
 
   return (
     <div className="">
-      <main className="">
-        <div className="p-4">
+      <Hero />
+      <main className="max-w-screen-lg mx-auto">
+        {/* <div className="p-4">
           <h1 className="text-gray-700 dark:text-foreground mb-8 text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold break-words leading-snug">
             Varsinais-Suomen Kennelpiirin kaverikoiratoiminta
           </h1>
@@ -41,10 +43,9 @@ export default async function Home() {
           width={1080}
           height={715}
           className="rounded-md shadow-lg"
-        />
+        /> */}
         <ul>
           {blogPosts.map((blogPost: BlogPost) => {
-            console.log(blogPost);
             return (
               <li
                 className="my-12 pb-12 p-4 rounded-lg bg-white shadow"
