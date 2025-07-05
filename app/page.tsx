@@ -6,75 +6,52 @@ import RichText from "./lib/contentful/RichText";
 import { Hero } from "./components/Hero";
 import type { BlogPost } from "./lib/contentful/blogPosts";
 import Gallery from "./components/Gallery";
-import Image from "next/image";
 import { formatDate } from "../lib/utils";
 
 export default async function Home() {
-  // Fetch blog posts using the content preview if draft mode is enabled:
   const blogPosts = await fetchBlogPosts({ preview: draftMode().isEnabled });
 
+  // Sort by newest first
+  const sortedPosts = [...blogPosts].sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  );
+
   return (
-    <div className="">
+    <div className="flex flex-col justify-center min-h-screen">
       <Hero />
-      <main className="max-w-screen-lg mx-auto">
-        {/* <div className="p-4">
-          <h1 className="text-gray-700 dark:text-foreground mb-8 text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold break-words leading-snug">
-            Varsinais-Suomen Kennelpiirin kaverikoiratoiminta
-          </h1>
-          <p className="text-lg text-gray-700 dark:text-foreground mb-8">
-            Kaverikoiratoiminta on vapaaehtoistoimintaa, jossa koira tuo iloa,
-            elämyksiä ja läheisyyttä ihmisille, joilla ei ole omaa koiraa.
-            Toiminta on alkanut Varsinais-Suomessa 2001 ja tällä hetkellä
-            toimintaa on koko Suomessa ja mukana on noin 1500 kaverikoirakkoa.
-            Näiltä sivuilta löydät Varsinais-Suomen kaverikoiraryhmien omat
-            sivut.
-          </p>
-        </div>
-        <Image
-          src="/4_koiraa.jpg"
-          alt="Neljä koiraa"
-          width={2448}
-          height={1636}
-          className="rounded-md shadow-lg mb-8"
-        />
-        <Image
-          src="/4_koiraa_2.jpg"
-          alt="Neljä koiraa"
-          width={1080}
-          height={715}
-          className="rounded-md shadow-lg"
-        /> */}
-        <ul>
-          {blogPosts.map((blogPost: BlogPost) => {
-            return (
-              <li
-                className="my-12 pb-12 p-4 rounded-lg bg-white shadow"
+      <main className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Uusimmat kuulumiset
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {sortedPosts.map((blogPost: BlogPost) => (
+              <article
                 key={blogPost.title}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
               >
-                {/* Render the blog post images
-                Use the Contentful Images API to render
-                responsive images. No next/image required: */}
-                {blogPost.images && <Gallery images={blogPost.images} />}
-
-                {/* Render the blog post title */}
-                <Link href={`/posts/${blogPost.slug}`}>
-                  <h1 className="my-6 text-2xl sm:text-3xl font-semibold leading-[1.3]">
-                    {blogPost.title}
-                  </h1>
-                </Link>
-
-                <p className="mb-6 font-light">
-                  {formatDate(blogPost.createdAt)}
-                </p>
-
-                {/* Render the blog post body */}
-                <div className="block text-base leading-relaxed">
-                  <RichText document={blogPost.body} />
+                {blogPost.images && (
+                  <div className="relative h-64 w-full overflow-hidden">
+                    <Gallery images={blogPost.images} />
+                  </div>
+                )}
+                <div className="flex flex-col flex-grow p-6">
+                  <Link href={`/posts/${blogPost.slug}`}>
+                    <h3 className="text-2xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-200 mb-3">
+                      {blogPost.title}
+                    </h3>
+                  </Link>
+                  <time className="text-sm text-gray-500 mb-4 block">
+                    {formatDate(blogPost.createdAt)}
+                  </time>
+                  <div className="prose prose-sm max-w-none text-gray-600 flex-grow">
+                    <RichText document={blogPost.body} />
+                  </div>
                 </div>
-              </li>
-            );
-          })}
-        </ul>
+              </article>
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );

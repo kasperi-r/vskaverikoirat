@@ -1,6 +1,12 @@
 import PhotoGallery from "../components/PhotoGallery";
 
 const photos = [
+  {
+    src: "/halinallet3.jpg",
+    alt: "Halinallet_kuva3",
+    width: 2048,
+    height: 1156,
+  },
   { src: "/halinallet1.jpg", alt: "Halinallet_kuva1", width: 843, height: 535 },
   { src: "/halinallet2.jpg", alt: "Halinallet_kuva2", width: 504, height: 540 },
   { src: "/halinallet6.jpg", alt: "Halinallet_kuva6", width: 526, height: 767 },

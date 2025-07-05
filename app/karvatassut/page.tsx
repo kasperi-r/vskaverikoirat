@@ -1,4 +1,25 @@
-import Image from "next/image";
+import PhotoGallery from "../components/PhotoGallery";
+
+const photos = [
+  {
+    src: "/karvatassut1.jpg",
+    alt: "Karvatassut_kuva1",
+    width: 500,
+    height: 400,
+  },
+  {
+    src: "/karvatassut2.jpg",
+    alt: "Karvatassut_kuva2",
+    width: 500,
+    height: 600,
+  },
+  {
+    src: "/karvatassut3.jpg",
+    alt: "Karvatassut_kuva3",
+    width: 600,
+    height: 400,
+  },
+];
 
 export default function Karvatassut() {
   return (
@@ -9,24 +30,8 @@ export default function Karvatassut() {
         <p>Yhteydenotot: salon.karvatassut@gmail.com</p>
       </div>
       <div className="text-center">
-        <div
-          style={{
-            border: "12px solid white",
-            borderRadius: "4px",
-            boxShadow:
-              "rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px",
-          }}
-        >
-          <Image
-            src="/karvatassut.jpg"
-            alt="Karvatassut"
-            width={1024}
-            height={768}
-          />
-        </div>
-        <p className="mt-2">
-          Salon iltatorilla 8.8.2024 kaverikoiratoimintaa esittelemässä
-        </p>
+        <PhotoGallery photos={photos} />
+        <p className="mt-2">Salon iltatorilla 3.7.2025</p>
       </div>
     </>
   );

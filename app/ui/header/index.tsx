@@ -41,7 +41,7 @@ export default function Component(props: NavbarProps) {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       classNames={{
-        base: "bg-background/80 backdrop-blur-lg shadow-md",
+        base: "shadow-md",
         wrapper: "max-w-screen-xl mx-auto",
       }}
     >
@@ -57,17 +57,21 @@ export default function Component(props: NavbarProps) {
 
       {/* Center Content */}
       <NavbarContent className="hidden lg:flex gap-1" justify="center">
-        <div className="flex gap-2 px-3 py-1.5 rounded-full backdrop-blur-sm bg-background/60">
+        <div className="flex gap-2 px-3 py-1.5 rounded-full backdrop-blur-sm">
           {centerLinks.map(({ path, label }) => (
-            <NavbarItem key={label} isActive={pathname === path} className="relative">
+            <NavbarItem
+              key={label}
+              isActive={pathname === path}
+              className="relative"
+            >
               <Link
                 color="foreground"
                 href={path}
                 className={cn(
                   "px-3 py-1.5 rounded-full transition-all duration-200 ease-in-out",
                   pathname === path
-                    ? "bg-warning-400/70 text-black font-medium shadow-md"
-                    : "hover:bg-default-200/60 hover:shadow"
+                    ? "bg-gradient-to-r from-amber-400 to-orange-400 text-white font-medium shadow-md"
+                    : "hover:bg-warning-400/40 hover:text-black"
                 )}
               >
                 {label}
@@ -118,7 +122,11 @@ export default function Component(props: NavbarProps) {
       >
         <div className="flex flex-col items-center gap-2 pt-2">
           {centerLinks.map(({ path, label }) => (
-            <NavbarMenuItem key={label} isActive={pathname === path} className="flex items-center">
+            <NavbarMenuItem
+              key={label}
+              isActive={pathname === path}
+              className="flex items-center"
+            >
               <Link
                 color="foreground"
                 href={path}
@@ -136,7 +144,11 @@ export default function Component(props: NavbarProps) {
           ))}
           <Divider className="my-2 opacity-75" />
           {rightLinks.map(({ path, label }) => (
-            <NavbarMenuItem key={label} isActive={pathname === path} className="flex items-center">
+            <NavbarMenuItem
+              key={label}
+              isActive={pathname === path}
+              className="flex items-center"
+            >
               <Link
                 color="foreground"
                 href={path}
