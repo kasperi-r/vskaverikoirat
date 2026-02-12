@@ -106,7 +106,7 @@ export default function Component({ title, className }: ComponentProps) {
 - **Enable preview and view a draft post**:
   - Visit `/api/draft?secret=<CONTENTFUL_PREVIEW_ACCESS_TOKEN>&redirect=/posts/my-slug` to enable preview, then open the redirected page which will use `preview: true` data if wired.
 - **Fetch all blog posts in a page**:
-  - In [app/page.tsx](app/page.tsx), import `fetchBlogPosts` and render a list. Use `preview` based on `draftMode().isEnabled` when needed.
+  - In [app/page.tsx](app/page.tsx), import `fetchBlogPosts` and render a list. Use `preview` based on `(await draftMode()).isEnabled` when needed.
 
 ## Notes
 
