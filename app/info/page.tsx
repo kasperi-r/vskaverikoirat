@@ -1,23 +1,23 @@
 export default function Info() {
   return (
-    <div className="py-8 px-4 sm:px-6 lg:px-8">
+    <div className="py-4 sm:py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
             Tietoa kaverikoiratoiminnasta
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-2">
             Vapaaehtoistoimintaa, jossa koira tuo iloa ja läheisyyttä ihmisille
           </p>
         </div>
 
         {/* Principles Card */}
-        <section className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-lg p-8 mb-8 border border-amber-100">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="bg-amber-500 rounded-full p-3 flex-shrink-0">
+        <section className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8 border border-amber-100">
+          <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <div className="bg-amber-500 rounded-full p-2 sm:p-3 flex-shrink-0">
               <svg
-                className="w-6 h-6 text-white"
+                className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -30,11 +30,11 @@ export default function Info() {
                 />
               </svg>
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <div className="flex-1 min-w-0">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Kaverikoiratoiminnan periaatteet
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 leading-relaxed">
                 <p>
                   Kaverikoira-koirakot toimivat samojen käytänteiden ja ohjeiden
                   mukaisesti. Kaverikoiraohjaajat vierailevat koiriensa kanssa
@@ -59,11 +59,11 @@ export default function Info() {
         </section>
 
         {/* How We Work Card */}
-        <section className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="bg-blue-500 rounded-full p-3 flex-shrink-0">
+        <section className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8 border border-gray-100">
+          <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <div className="bg-blue-500 rounded-full p-2 sm:p-3 flex-shrink-0">
               <svg
-                className="w-6 h-6 text-white"
+                className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -76,11 +76,11 @@ export default function Info() {
                 />
               </svg>
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <div className="flex-1 min-w-0">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Näin kaverikoirat toimivat
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 leading-relaxed">
                 <p>
                   Kaverikoira on Kenneliiton rekisteröimä tavaramerkki ja koko
                   Suomessa noudatetaan kaikessa toiminnassa Kenneliiton
@@ -93,11 +93,11 @@ export default function Info() {
                   nimikylttiä vierailuilla. Koirasta käytetään kutsumanimeä ja
                   ohjaajasta etunimeä.
                 </p>
-                <div className="bg-blue-50 rounded-xl p-6 my-6 border-l-4 border-blue-500">
-                  <h3 className="font-semibold text-gray-900 mb-3 text-lg">
+                <div className="bg-blue-50 rounded-lg sm:rounded-xl p-4 sm:p-6 my-4 sm:my-6 border-l-4 border-blue-500">
+                  <h3 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-base sm:text-lg">
                     Vierailun käytännöt:
                   </h3>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 text-sm sm:text-base text-gray-700">
                     <li className="flex items-start gap-2">
                       <span className="text-blue-500 mt-1">•</span>
                       <span>
@@ -145,11 +145,11 @@ export default function Info() {
         </section>
 
         {/* Volunteer Work Card */}
-        <section className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 mb-8 border border-green-100">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="bg-green-500 rounded-full p-3 flex-shrink-0">
+        <section className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8 border border-green-100">
+          <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <div className="bg-green-500 rounded-full p-2 sm:p-3 flex-shrink-0">
               <svg
-                className="w-6 h-6 text-white"
+                className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -162,11 +162,11 @@ export default function Info() {
                 />
               </svg>
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <div className="flex-1 min-w-0">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Kaverikoiratoiminta on vapaaehtoistyötä
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 leading-relaxed">
                 <p>
                   Toimimme täysin ilman korvausta omien koiriemme kanssa
                   ilahduttaen ihmisiä. Emme ota vastaan palkkioita emmekä
@@ -185,11 +185,11 @@ export default function Info() {
         </section>
 
         {/* Contact Card */}
-        <section className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-purple-100">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="bg-purple-500 rounded-full p-3 flex-shrink-0">
+        <section className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 border border-purple-100">
+          <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <div className="bg-purple-500 rounded-full p-2 sm:p-3 flex-shrink-0">
               <svg
-                className="w-6 h-6 text-white"
+                className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -202,57 +202,57 @@ export default function Info() {
                 />
               </svg>
             </div>
-            <div className="flex-1">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <div className="flex-1 min-w-0">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Näin voit kysyä kaverikoiria vierailuille
               </h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed mb-6">
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">
                 <p>
                   Jokainen kaverikoiraryhmä vastaa omien vierailukohteidensa
                   toteuttamisesta. Toisinaan olemme myös yleisötapahtumissa yms.
-                  yhteisvierailuilla kaikin ryhmiemme kanssa.
+                  yhteisvierailuilla kaikkien ryhmiemme kanssa.
                 </p>
                 <p className="font-medium text-purple-900">
                   Ota yhteyttä kaverikoiraryhmiin ja kysy
                   vierailumahdollisuutta:
                 </p>
               </div>
-              <div className="grid sm:grid-cols-1 gap-4 mb-6">
-                <div className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow border border-purple-100">
-                  <h3 className="font-semibold text-gray-900 mb-2">
+              <div className="grid sm:grid-cols-1 gap-3 sm:gap-4 mb-4 sm:mb-6">
+                <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow border border-purple-100">
+                  <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">
                     Turun Taikatassut
                   </h3>
                   <a
                     href="mailto:kaverikoira.taikatassut@gmail.com"
-                    className="text-purple-600 hover:text-purple-700 underline break-all"
+                    className="text-purple-600 hover:text-purple-700 underline break-all text-sm sm:text-base"
                   >
                     kaverikoira.taikatassut@gmail.com
                   </a>
                 </div>
-                <div className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow border border-purple-100">
-                  <h3 className="font-semibold text-gray-900 mb-2">
+                <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow border border-purple-100">
+                  <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">
                     Turun (pohjoinen) Halinallet
                   </h3>
                   <a
                     href="mailto:kaverikoira.halinallet@gmail.com"
-                    className="text-purple-600 hover:text-purple-700 underline break-all"
+                    className="text-purple-600 hover:text-purple-700 underline break-all text-sm sm:text-base"
                   >
                     kaverikoira.halinallet@gmail.com
                   </a>
                 </div>
-                <div className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow border border-purple-100">
-                  <h3 className="font-semibold text-gray-900 mb-2">
+                <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow border border-purple-100">
+                  <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">
                     Salon Karvatassut
                   </h3>
                   <a
                     href="mailto:salon.karvatassut@gmail.com"
-                    className="text-purple-600 hover:text-purple-700 underline break-all"
+                    className="text-purple-600 hover:text-purple-700 underline break-all text-sm sm:text-base"
                   >
                     salon.karvatassut@gmail.com
                   </a>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 bg-purple-50 rounded-lg p-4 border-l-4 border-purple-300">
+              <p className="text-xs sm:text-sm text-gray-600 bg-purple-50 rounded-lg p-3 sm:p-4 border-l-4 border-purple-300">
                 <strong>Huom:</strong> Tällä hetkellä pyyntöjä tulee ryhmille
                 enemmän kuin vapaaehtoisemme pystyvät toteuttamaan, yritämme
                 kuitenkin vastata pyyntöihin mahdollisuuksien mukaan.

@@ -68,10 +68,10 @@ export default function Component(props: NavbarProps) {
                 color="foreground"
                 href={path}
                 className={cn(
-                  "px-3 py-1.5 rounded-full transition-all duration-200 ease-in-out",
+                  "px-3 py-1.5 transition-all duration-200 ease-in-out relative",
                   pathname === path
-                    ? "bg-gradient-to-r from-amber-400 to-orange-400 text-white font-medium shadow-md"
-                    : "hover:bg-warning-400/40 hover:text-black"
+                    ? "text-amber-600 font-medium after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-gradient-to-r after:from-amber-500 after:to-orange-500 after:rounded-full"
+                    : "hover:text-amber-600"
                 )}
               >
                 {label}
@@ -90,10 +90,10 @@ export default function Component(props: NavbarProps) {
               href={path}
               size="sm"
               className={cn(
-                "px-4 py-2 rounded-full font-medium transition-all duration-200",
+                "px-4 py-2 font-medium transition-all duration-200 relative",
                 pathname === path
-                  ? "bg-warning-500 text-white shadow"
-                  : "hover:bg-warning-400/40 hover:text-black"
+                  ? "text-amber-600 after:absolute after:bottom-1 after:left-4 after:right-4 after:h-0.5 after:bg-gradient-to-r after:from-amber-500 after:to-orange-500 after:rounded-full"
+                  : "hover:text-amber-600"
               )}
             >
               {label}
@@ -132,10 +132,10 @@ export default function Component(props: NavbarProps) {
                 href={path}
                 size="lg"
                 className={cn(
-                  "px-3 py-1.5 rounded-full transition-all duration-200 ease-in-out",
+                  "px-3 py-1.5 transition-all duration-200 ease-in-out relative",
                   pathname === path
-                    ? "bg-warning-400/70 text-black font-medium shadow-md"
-                    : "hover:bg-default-200/60 hover:shadow"
+                    ? "text-amber-600 font-medium after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-gradient-to-r after:from-amber-500 after:to-orange-500 after:rounded-full"
+                    : "hover:text-amber-600"
                 )}
               >
                 {label}
@@ -154,10 +154,10 @@ export default function Component(props: NavbarProps) {
                 href={path}
                 size="lg"
                 className={cn(
-                  "px-3 py-1.5 rounded-full transition-all duration-200 ease-in-out",
+                  "px-3 py-1.5 transition-all duration-200 ease-in-out relative",
                   pathname === path
-                    ? "bg-warning-400/70 text-black font-medium shadow-md"
-                    : "hover:bg-default-200/60 hover:shadow"
+                    ? "text-amber-600 font-medium after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-gradient-to-r after:from-amber-500 after:to-orange-500 after:rounded-full"
+                    : "hover:text-amber-600"
                 )}
               >
                 {label}
