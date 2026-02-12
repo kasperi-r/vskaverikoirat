@@ -5,7 +5,7 @@ import { Hero } from "./components/Hero";
 import BlogCard from "./components/BlogCard";
 
 export default async function Home() {
-  const blogPosts = await fetchBlogPosts({ preview: draftMode().isEnabled });
+  const blogPosts = await fetchBlogPosts({ preview: (await draftMode()).isEnabled });
 
   // Sort by newest first
   const sortedPosts = [...blogPosts].sort(

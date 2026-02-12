@@ -8,7 +8,7 @@ export async function GET(request: Request) {
         return new Response('Invalid token', { status: 401 })
     }
 
-    draftMode().enable()
+    (await draftMode()).enable()
 
     redirect(searchParams.get('redirect') || '/')
 }
