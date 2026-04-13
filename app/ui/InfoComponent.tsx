@@ -2,7 +2,7 @@ import React from 'react';
 
 interface InfoComponentProps {
   title: string;
-  body: (string | JSX.Element)[];
+  body: (string | React.JSX.Element)[];
 }
 
 const InfoComponent: React.FC<InfoComponentProps> = ({ title, body }) => {

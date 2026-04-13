@@ -18,6 +18,8 @@
 
 // export default Footer;
 
+"use client";
+
 import { Image, Link } from "@heroui/react";
 
 const Footer = () => {

@@ -1,8 +1,8 @@
+@import "./components/imagezoom.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "./components/imagezoom.css";
 
 @layer utilities {
   .text-balance {
