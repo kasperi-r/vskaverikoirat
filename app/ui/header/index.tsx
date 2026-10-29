@@ -21,7 +21,6 @@ import { palanquin } from "../fonts";
 
 const centerLinks = [
   { path: "/taikatassut", label: "Taikatassut" },
-  { path: "/halinallet", label: "Halinallet" },
   { path: "/karvatassut", label: "Karvatassut" },
 ];
 

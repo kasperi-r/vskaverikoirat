@@ -231,17 +231,6 @@ export default function Info() {
                 </div>
                 <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow border border-purple-100">
                   <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">
-                    Turun (pohjoinen) Halinallet
-                  </h3>
-                  <a
-                    href="mailto:kaverikoira.halinallet@gmail.com"
-                    className="text-purple-600 hover:text-purple-700 underline break-all text-sm sm:text-base"
-                  >
-                    kaverikoira.halinallet@gmail.com
-                  </a>
-                </div>
-                <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow border border-purple-100">
-                  <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">
                     Salon Karvatassut
                   </h3>
                   <a

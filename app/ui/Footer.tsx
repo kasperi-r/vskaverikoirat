@@ -25,7 +25,6 @@ import { Image, Link } from "@heroui/react";
 const Footer = () => {
   const quickLinks = [
     { label: "Taikatassut", href: "/taikatassut" },
-    { label: "Halinallet", href: "/halinallet" },
     { label: "Karvatassut", href: "/karvatassut" },
     { label: "Tietoa meistä", href: "/info" },
     { label: "Liity mukaan", href: "/liity-mukaan" },

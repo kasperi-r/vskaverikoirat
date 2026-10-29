@@ -17,7 +17,7 @@ This is a [Next.js](https://nextjs.org/) project for the "Varsinais-Suomen Kenne
   - `components/`: React components used throughout the application.
   - `lib/`: Library code, including Contentful client and utilities.
   - `ui/`: UI components like header and footer.
-  - Various pages for different sections of the website (e.g., `halinallet`, `info`, `karvatassut`, `liity-mukaan`, `taikatassut`).
+  - Various pages for different sections of the website (e.g., `info`, `karvatassut`, `liity-mukaan`, `taikatassut`).
 - `public/`: Public assets like images.
 - `lib/utils.ts`: Utility functions.
 
